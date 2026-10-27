@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">STUDENT FEEDBACK PORTAL</div>
+        <p>Your opinion helps us improve your learning experience</p>
+    </div>
+
+    <form action="FeedbackServlet" method="post">
+        <h2>Student Information</h2>
+        <div class="row">
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="field">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="field">
+                <label>Course</label>
+                <select name="course">
+                    <option>Java Programming</option>
+                    <option>Python Programming</option>
+                    <option>Database Management</option>
+                    <option>Web Development</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Faculty</label>
+                <select name="faculty">
+                    <option>Dr. Sharma</option>
+                    <option>Dr. Gupta</option>
+                    <option>Dr. Singh</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+
+        <h2>Rate Your Experience</h2>
+        <div class="rating">
+            <label>Teaching Quality</label>
+            <select name="teaching">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very Poor</option>
+            </select>
+        </div>
+        <div class="rating">
+            <label>Course Content</label>
+            <select name="content">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very Poor</option>
+            </select>
+        </div>
+        <div class="rating">
+            <label>Practical / Lab</label>
+            <select name="practical">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very Poor</option>
+            </select>
+        </div>
+
+        <h2>Your Suggestions</h2>
+        <textarea name="feedback" placeholder="Tell us how we can improve the course..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div class="get-test" style="margin-top:25px;padding:20px;background:#f4f6fc;border-radius:10px">
+        <h2>GET Method Demonstration</h2>
+        <p>Test how a GET request sends information to the Servlet.</p>
+        <form action="FeedbackServlet" method="get">
+            <input type="text" name="studentName" placeholder="Enter your name" required>
+            <button type="submit">Test GET Request</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        Student Feedback Portal • Academic Evaluation System
+    </div>
+</div>
+</body>
+</html>
